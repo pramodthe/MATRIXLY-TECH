@@ -4,7 +4,6 @@ import Features from './components/Features';
 import Security from './components/Security';
 import Innovation from './components/Innovation';
 import VisualiserFeature from './components/VisualiserFeature';
-import ChatWidget from './components/ChatWidget';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, ChevronDown, LayoutGrid, Home as HomeIcon } from 'lucide-react';
 
@@ -209,8 +208,6 @@ function App() {
         <div className="mb-6 font-bold text-foreground tracking-widest uppercase">Matrixly</div>
         <p>&copy; 2026 Matrixly AI Construction Platform. All rights reserved.</p>
       </footer>
-
-      <ChatWidget />
     </div>
   );
 }
