@@ -3,6 +3,8 @@ import { Terminal, Cpu } from 'lucide-react';
 import MagnifiedBento from './MagnifiedBento';
 
 const Hero = () => {
+  const calendlyUrl = 'https://calendly.com/pramodthebe/30min';
+
   return (
     <section className="relative min-h-dvh flex flex-col items-center justify-center pt-24 pb-12 px-6 overflow-hidden bg-background">
       {/* Abstract AI Background Elements */}
@@ -40,10 +42,15 @@ const Hero = () => {
             </p>
 
             <div className="flex justify-start">
-              <button className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/10">
+              <a
+                href={calendlyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-xl hover:opacity-90 transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/10"
+              >
                 <Cpu size={18} />
                 Book a Strategy Call
-              </button>
+              </a>
             </div>
             
             <div className="mt-12 flex items-center gap-6 text-muted-foreground">

@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Moon, Sun, ChevronDown, LayoutGrid, Home as HomeIcon } from 'lucide-react';
 
 function App() {
+  const calendlyUrl = 'https://calendly.com/pramodthebe/30min';
   const [view, setView] = useState<'home' | 'visualiser'>('home');
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -96,9 +97,14 @@ function App() {
               {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
             </button>
 
-            <button className="hidden sm:block px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity">
+            <a
+              href={calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+            >
               Book a Strategy Call
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -155,9 +161,14 @@ function App() {
                     Contact us to know more and discover how your workflows can transform.
                   </p>
                   <div className="flex justify-center">
-                    <button className="px-10 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:opacity-90 transition-all shadow-xl shadow-primary/10">
+                    <a
+                      href={calendlyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-10 py-4 bg-primary text-primary-foreground font-bold rounded-xl text-lg hover:opacity-90 transition-all shadow-xl shadow-primary/10"
+                    >
                       Book a Strategy Call
-                    </button>
+                    </a>
                   </div>
                   </motion.div>
                   </section>
