@@ -8,6 +8,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  preview: {
+    // Allow DigitalOcean app domains when serving via `vite preview`
+    allowedHosts: ['.ondigitalocean.app'],
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
