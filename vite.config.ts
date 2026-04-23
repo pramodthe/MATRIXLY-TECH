@@ -9,8 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [react()],
   preview: {
-    // Allow DigitalOcean app domains when serving via `vite preview`
-    allowedHosts: ['.ondigitalocean.app'],
+    // Custom domain + DO app URLs when serving via `vite preview`
+    allowedHosts: ['matrixly.tech', 'www.matrixly.tech', '.ondigitalocean.app'],
   },
   resolve: {
     alias: {
